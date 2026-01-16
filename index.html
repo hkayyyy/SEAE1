@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rail Acronym Centre</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header definition -->
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-train"></i> Rail Acronym Center</h1>
+            <p class="subtitle">Instant railway terminology and acronyms lookup</p>
+        </header>
+
+        <main class="main-content">
+            <div class="search-section">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" 
+                           id="searchInput" 
+                           placeholder="Search rail terms (ETCS, PWAY, RGS, AWS, TPWS...)" 
+                           autocomplete="off"
+                           autofocus>
+                    <button id="clearBtn" class="clear-btn" title="Clear search">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <div class="controls">
+                    <button id="luckyBtn" class="lucky-btn">
+                        <i class="fas fa-dice"></i> I'm Feeling Lucky
+                    </button>
+                    <div class="stats">
+                        <span id="resultCount">0 terms</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-filter">
+                <div class="category-tags">
+                    <button class="category-tag active" data-category="all">All Terms</button>
+                    <button class="category-tag" data-category="signalling">Signalling</button>
+                    <button class="category-tag" data-category="regulations">Regulations</button>
+                    <button class="category-tag" data-category="operations">Operations</button>
+                    <button class="category-tag" data-category="electrification">Electrification</button>
+                    <button class="category-tag" data-category="safety">Safety</button>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <div class="results-header">
+                    <h2 id="resultsTitle">Search Results</h2>
+                </div>
+                
+                <div class="results-container">
+                    <div class="results-list" id="resultsList">
+                        <!-- Results will be populated by JavaScript -->
+                        <div class="initial-state">
+                            <i class="fas fa-search"></i>
+                            <p>Start typing to search rail terms and acronyms</p>
+                        </div>
+                    </div>
+                    
+                    <div class="term-detail" id="termDetail">
+                        <div class="detail-placeholder">
+                            <i class="fas fa-info-circle"></i>
+                            <p>Select a term to view detailed information</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Data updates can be made via the CSV</p>
+            <p class="disclaimer">For informational purposes only. Always refer to official documentation.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
